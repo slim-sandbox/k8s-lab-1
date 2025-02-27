@@ -1,9 +1,10 @@
 # Challenge
-- 
+A web deployment and service is deployed but not accessible via the service url.
+Fix it.
 
-# Setup challenge in all namespace
+# Setup Challenge in all namespace
 ```
-k get namespace -oname | cut -d'/' -f2 | xargs -I{} kubectl apply -f  . -n {}
+kubectl get namespace -oname | cut -d'/' -f2 | xargs -I{} kubectl apply -f  . -n {}
 ```
 
 # Useful commands
